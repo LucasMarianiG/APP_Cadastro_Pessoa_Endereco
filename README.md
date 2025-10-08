@@ -123,9 +123,6 @@ APP_PessoaEdereco/
 * Python 3.10+
 * FastAPI
 * SQLModel
-* Uvicorn
-
-`requirements.txt`:
 
 ```
 fastapi==0.114.2
@@ -144,7 +141,10 @@ SQLModel==0.0.22
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install "fastapi[standard]"
+python.exe -m pip install --upgrade pip #Caso precise de uma atualização
+pip install sqlmodel
+fastapi dev .\APP_PessoaEdereco\main.py
 ```
 
 2. (Opcional) Defina o banco via variável de ambiente:
